@@ -1,0 +1,30 @@
+{
+    "name": "LinkedIn Auto Connect",
+    "description": "LinkedIn Connect Button Helper",
+    "version": "0.0.1",
+    "manifest_version": 3,
+    "author": "Akash Vaghela",
+    "permissions": ["tabs", "activeTab", "scripting"],
+    "host_permissions": ["https://*.linkedin.com/*"],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "content_scripts": [
+        {
+            "matches": ["https://www.linkedin.com/"],
+            "js": ["script.js"]
+        }
+    ],
+    "action":{
+        "default_popup": "index.html",
+        "default_title": "LinkedIn Auto Connect"
+    },
+    "icons": {
+        "16": "icons/icon-16.png",
+        "48": "icons/icon-48.png",
+        "128": "icons/icon-128.png"
+    },
+    "content_security_policy": {
+        "extension_pages": "script-src 'self'; object-src 'self'; script-src-elem 'self' 'unsafe-inline' https://linkedin.com;"
+    }
+}

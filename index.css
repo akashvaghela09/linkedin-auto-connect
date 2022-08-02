@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 250px;
+    height: 255px;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #475569;
+    height: 100%;
+}
+
+.header {
+    background-color: #0F172A;
+    font-size: 15px;
+    padding: 8px;
+    color: white;
+    width: 100%;
+    text-align: center;
+}
+
+.infoWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.infoLabel {
+    font-size: 18px;
+    color: white;
+    margin: 15px 0px;
+}
+
+.countWrapper {
+    width: 70px;
+    height: 70px;
+    border: 5px solid white;
+    border-radius: 50%;
+    display: grid;
+    place-content: center;
+}
+
+.count {
+    font-size: 25px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.startButton, .stopButton {
+    width: 70%;
+    margin: 17px 0px;
+    font-size: 17px;
+    cursor: pointer;
+    color: white;
+    border-radius: 5px;
+    padding: 8px;
+}
+
+.stopButton {
+    display: none;
+}
+
+.startButton {
+    background-color: #047857;
+}
+
+.stopButton {
+    background-color: #DC2626;
+}
